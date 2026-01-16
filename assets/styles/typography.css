@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('/fonts/PlayfairDisplay-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/fonts/CormorantGaramond-Regular.woff2') format('woff2');
+}
+
+:root {
+  --font-title: 'Playfair Display', serif;
+  --font-body: 'Cormorant Garamond', serif;
+}
