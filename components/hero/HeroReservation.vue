@@ -5,7 +5,7 @@
         {{ t('heroReservation.title') }}
       </h1>
 
-      <NuxtLink to="/reservation" class="hero-cta">
+      <NuxtLink to="/reserver" class="hero-cta">
         {{ t('heroReservation.cta') }}
       </NuxtLink>
     </div>
