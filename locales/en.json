@@ -133,61 +133,61 @@
   },
 
   "cgu": {
-    "title": "Terms and Conditions",
-    "intro": "These Terms and Conditions govern the relationship between the restaurant Lait Thym Sel and its customers.",
+  "title": "Terms and Conditions",
+  "intro": "These Terms and Conditions govern the relationship between the restaurant Lait Thym Sel and its customers.",
 
-    "preamble": {
-      "title": "Preamble",
-      "p1": "These Terms and Conditions govern the relationship between SARL FG2M Restaurant Lait Thym Sel and any person making a reservation.",
-      "p2": "Any reservation implies full acceptance of these Terms and Conditions."
-    },
-
-    "article1": {
-      "title": "Article 1 – Purpose",
-      "content": "These Terms define the conditions of reservation and restaurant services."
-    },
-
-    "article2": {
-      "title": "Article 2 – Reservation",
-      "p1": "Reservations are made online or by phone.",
-      "p2": "The customer agrees to provide accurate information.",
-      "p3": "A bank card pre-authorization may be required."
-    },
-
-    "article3": {
-      "title": "Article 3 – Cancellation",
-      "p1": "Any cancellation must be made at least 12 hours before the scheduled time.",
-      "p2": "Otherwise, fees may apply.",
-      "email": "By email: contact@laitthymsel.fr",
-      "phone": "By phone: +33 2 41 27 20 40"
-    },
-
-    "article4": {
-      "title": "Article 4 – Penalties",
-      "content": "In case of no-show without cancellation, a penalty per reserved guest may be charged."
-    },
-
-    "article5": {
-      "title": "Article 5 – Payment",
-      "content": "Payments are secure. No banking data is stored."
-    },
-
-    "article6": {
-      "title": "Article 6 – Liability",
-      "p1": "The restaurant commits to providing reserved services.",
-      "p2": "It cannot be held liable in case of force majeure."
-    },
-
-    "article7": {
-      "title": "Article 7 – Personal data",
-      "content": "Collected data is used only for reservation management."
-    },
-
-    "article8": {
-      "title": "Article 8 – Governing law",
-      "content": "These Terms are governed by French law."
-    }
+  "preamble": {
+    "title": "Preamble",
+    "p1": "These Terms and Conditions govern the relationship between SARL FG2M Restaurant Lait Thym Sel and any person making a reservation.",
+    "p2": "Any reservation implies full acceptance of these Terms and Conditions."
   },
+
+  "article1": {
+    "title": "Article 1 – Purpose",
+    "content": "These Terms define the conditions of reservation and restaurant services."
+  },
+
+  "article2": {
+    "title": "Article 2 – Reservation",
+    "p1": "Reservations are made online or by phone.",
+    "p2": "The customer agrees to provide accurate information when booking.",
+    "p3": "A bank card pre-authorization may be required as a guarantee."
+  },
+
+  "article3": {
+    "title": "Article 3 – Cancellation",
+    "p1": "Any cancellation must be made at least 12 hours before the scheduled time.",
+    "p2": "Otherwise, fees may apply.",
+    "email": "By email: contact@laitthymsel.fr",
+    "phone": "By phone: +33 2 41 27 20 40"
+  },
+
+  "article4": {
+    "title": "Article 4 – Penalties",
+    "content": "In case of no-show without cancellation, a penalty per reserved guest may be charged."
+  },
+
+  "article5": {
+    "title": "Article 5 – Payment",
+    "content": "Payments are secure. No banking data is stored by the restaurant."
+  },
+
+  "article6": {
+    "title": "Article 6 – Liability",
+    "p1": "The restaurant commits to providing the reserved services.",
+    "p2": "It cannot be held liable in case of force majeure or circumstances beyond its control."
+  },
+
+  "article7": {
+    "title": "Article 7 – Personal data",
+    "content": "Collected data is used solely for reservation management."
+  },
+
+  "article8": {
+    "title": "Article 8 – Governing law",
+    "content": "These Terms are governed by French law."
+  }
+},
 
   "legal": {
     "kicker": "Legal information",

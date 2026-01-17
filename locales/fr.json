@@ -133,61 +133,61 @@
   },
 
   "cgu": {
-    "title": "Conditions Générales",
-    "intro": "Les présentes Conditions Générales régissent les relations entre le restaurant Lait Thym Sel et ses clients.",
+  "title": "Conditions Générales",
+  "intro": "Les présentes Conditions Générales régissent les relations entre le restaurant Lait Thym Sel et ses clients.",
 
-    "preamble": {
-      "title": "Préambule",
-      "p1": "Les présentes Conditions Générales régissent les relations entre la SARL FG2M Restaurant Lait Thym Sel et toute personne effectuant une réservation.",
-      "p2": "Toute réservation implique l’acceptation pleine et entière des présentes Conditions Générales."
-    },
-
-    "article1": {
-      "title": "Article 1 – Objet",
-      "content": "Les présentes Conditions Générales définissent les modalités de réservation et de prestation de services de restauration."
-    },
-
-    "article2": {
-      "title": "Article 2 – Réservation",
-      "p1": "Les réservations sont effectuées en ligne ou par téléphone.",
-      "p2": "Le client s’engage à fournir des informations exactes.",
-      "p3": "Une empreinte bancaire peut être demandée à titre de garantie."
-    },
-
-    "article3": {
-      "title": "Article 3 – Annulation",
-      "p1": "Toute annulation doit être effectuée au minimum 12 heures avant l’horaire prévu.",
-      "p2": "À défaut, des frais pourront être appliqués.",
-      "email": "Par e-mail : contact@laitthymsel.fr",
-      "phone": "Par téléphone : 02 41 27 20 40"
-    },
-
-    "article4": {
-      "title": "Article 4 – Pénalités",
-      "content": "En cas de non-présentation sans annulation préalable, une pénalité par couvert réservé pourra être facturée."
-    },
-
-    "article5": {
-      "title": "Article 5 – Paiement",
-      "content": "Les paiements sont sécurisés. Aucune donnée bancaire n’est conservée."
-    },
-
-    "article6": {
-      "title": "Article 6 – Responsabilité",
-      "p1": "Le restaurant s’engage à fournir les prestations réservées.",
-      "p2": "Il ne saurait être tenu responsable en cas de force majeure."
-    },
-
-    "article7": {
-      "title": "Article 7 – Données personnelles",
-      "content": "Les données collectées sont utilisées exclusivement pour la gestion des réservations."
-    },
-
-    "article8": {
-      "title": "Article 8 – Droit applicable",
-      "content": "Les présentes Conditions Générales sont soumises au droit français."
-    }
+  "preamble": {
+    "title": "Préambule",
+    "p1": "Les présentes Conditions Générales régissent les relations entre la SARL FG2M Restaurant Lait Thym Sel et toute personne effectuant une réservation.",
+    "p2": "Toute réservation implique l’acceptation pleine et entière des présentes Conditions Générales."
   },
+
+  "article1": {
+    "title": "Article 1 – Objet",
+    "content": "Les présentes Conditions Générales définissent les modalités de réservation et de prestation de services de restauration."
+  },
+
+  "article2": {
+    "title": "Article 2 – Réservation",
+    "p1": "Les réservations sont effectuées en ligne ou par téléphone.",
+    "p2": "Le client s’engage à fournir des informations exactes lors de la réservation.",
+    "p3": "Une empreinte bancaire peut être demandée à titre de garantie."
+  },
+
+  "article3": {
+    "title": "Article 3 – Annulation",
+    "p1": "Toute annulation doit être effectuée au minimum 12 heures avant l’horaire prévu.",
+    "p2": "À défaut, des frais pourront être appliqués.",
+    "email": "Par e-mail : contact@laitthymsel.fr",
+    "phone": "Par téléphone : 02 41 27 20 40"
+  },
+
+  "article4": {
+    "title": "Article 4 – Pénalités",
+    "content": "En cas de non-présentation sans annulation préalable, une pénalité par couvert réservé pourra être facturée."
+  },
+
+  "article5": {
+    "title": "Article 5 – Paiement",
+    "content": "Les paiements sont sécurisés. Aucune donnée bancaire n’est conservée par le restaurant."
+  },
+
+  "article6": {
+    "title": "Article 6 – Responsabilité",
+    "p1": "Le restaurant s’engage à fournir les prestations réservées.",
+    "p2": "Il ne saurait être tenu responsable en cas de force majeure ou d’événement indépendant de sa volonté."
+  },
+
+  "article7": {
+    "title": "Article 7 – Données personnelles",
+    "content": "Les données collectées sont utilisées exclusivement pour la gestion des réservations."
+  },
+
+  "article8": {
+    "title": "Article 8 – Droit applicable",
+    "content": "Les présentes Conditions Générales sont soumises au droit français."
+  }
+},
 
   "legal": {
     "kicker": "Informations légales",
