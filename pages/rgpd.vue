@@ -1,164 +1,112 @@
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t, tm } = useI18n()
+
+const commitments = tm('rgpd.commitments') as { title: string; text: string }[]
+const dataUses = tm('rgpd.dataUses') as string[]
+const partners = tm('rgpd.partners') as { name: string; text?: string; link?: string }[]
+</script>
+
 <template>
   <section class="rgpd">
     <div class="rgpd-inner">
 
+      <!-- HEADER -->
       <header class="rgpd-header">
-        <h1>Protection des données (RGPD)</h1>
+        <h1>{{ t('rgpd.title') }}</h1>
         <p class="rgpd-intro">
-          Le Restaurant s’engage à protéger vos données personnelles,
-          conformément au Règlement Général sur la Protection des Données (RGPD)
-          et à la loi Informatique et Libertés du 6 janvier 1978.
+          {{ t('rgpd.intro') }}
         </p>
       </header>
 
       <article class="rgpd-content">
-        <h2>Engagements fondamentaux</h2>
-        <p>
-          Le Restaurant s’engage, dans le cadre de ses activités,
-          à ce que la collecte et le traitement de vos données,
-          effectués à partir de ses sites, soient conformes au RGPD
-          et à prendre toute précaution pour préserver la protection,
-          la confidentialité et la sécurité des informations nominatives
-          qui lui sont confiées.
-        </p>
+
+        <!-- ENGAGEMENTS -->
+        <h2>{{ t('rgpd.sections.commitments.title') }}</h2>
+        <p>{{ t('rgpd.sections.commitments.text') }}</p>
 
         <ul>
-          <li><strong>Transparence :</strong> information utile sur les finalités et destinataires des données.</li>
-          <li><strong>Légitimité et pertinence :</strong> collecte limitée aux données nécessaires.</li>
-          <li><strong>Confidentialité et intégrité :</strong> mesures techniques et organisationnelles raisonnables.</li>
-          <li><strong>Conservation :</strong> durée limitée à ce qui est nécessaire.</li>
-          <li><strong>Droits :</strong> possibilité de modifier et supprimer vos données sur demande.</li>
+          <li v-for="(item, i) in commitments" :key="i">
+            <strong>{{ item.title }}</strong> {{ item.text }}
+          </li>
         </ul>
 
-        <p>
-          Le Restaurant peut apporter des modifications à la présente politique.
-          Merci de la consulter régulièrement afin de rester informé.
-        </p>
+        <p>{{ t('rgpd.sections.commitments.note') }}</p>
 
-        <h2>Votre consentement</h2>
-        <p>
-          Le Restaurant collecte et utilise vos informations personnelles uniquement
-          lorsqu’il est pertinent et légal de le faire. Pour la collecte des données,
-          votre consentement sera demandé de façon explicite.
-        </p>
+        <!-- CONSENTEMENT -->
+        <h2>{{ t('rgpd.sections.consent.title') }}</h2>
+        <p>{{ t('rgpd.sections.consent.text') }}</p>
+
         <p class="muted">
-          Plus d’informations relatives aux cookies :
-          <a href="https://laitthymsel.com/politique-des-cookies/" target="_blank" rel="noopener">
-            https://laitthymsel.com/politique-des-cookies/
+          {{ t('rgpd.sections.consent.cookies') }}
+          <a
+            :href="t('rgpd.sections.consent.cookiesLink')"
+            target="_blank"
+            rel="noopener"
+          >
+            {{ t('rgpd.sections.consent.cookiesLink') }}
           </a>
         </p>
 
-        <h2>Données collectées et finalités</h2>
-        <p>
-          Nous ne recueillons que les données nécessaires pour vous offrir nos services
-          et les améliorer. Ces données peuvent notamment être recueillies dans le cadre :
-        </p>
+        <!-- DONNÉES -->
+        <h2>{{ t('rgpd.sections.data.title') }}</h2>
+        <p>{{ t('rgpd.sections.data.text') }}</p>
 
         <ul>
-          <li>de la visite de nos services en ligne et de sites partenaires/applications (ex : Zenchef, SecretBox) ;</li>
-          <li>d’une réservation en ligne ou par téléphone ;</li>
-          <li>de vos achats de produits (e-boutique, cadeaux) et de l’utilisation de nos services ;</li>
-          <li>de la diffusion d’informations (offres, actualités, newsletters) ;</li>
-          <li>de votre venue au Restaurant.</li>
+          <li v-for="(item, i) in dataUses" :key="i">
+            {{ item }}
+          </li>
         </ul>
 
-        <p>
-          Nous recueillons des données directes telles que :
-          nom, prénom, adresse postale, e-mail, téléphone et coordonnées professionnelles.
-        </p>
+        <p>{{ t('rgpd.sections.data.direct') }}</p>
+        <p>{{ t('rgpd.sections.data.payment') }}</p>
+        <p>{{ t('rgpd.sections.data.sensitive') }}</p>
 
-        <p>
-          Notre prestataire de paiement en ligne <strong>Payzen</strong> peut être amené
-          à collecter des données bancaires (numéro de carte, date de validité, cryptogramme)
-          dans le cadre d’une réservation.
-        </p>
+        <!-- SÉCURITÉ -->
+        <h2>{{ t('rgpd.sections.security.title') }}</h2>
+        <p>{{ t('rgpd.sections.security.text1') }}</p>
+        <p>{{ t('rgpd.sections.security.text2') }}</p>
 
-        <p>
-          Conformément à la réglementation en vigueur, nous ne collectons en aucun cas
-          les catégories particulières de données personnelles (origine raciale/ethnique,
-          opinions politiques, convictions, données génétiques/biométriques, etc.).
-        </p>
+        <!-- CONSERVATION -->
+        <h2>{{ t('rgpd.sections.retention.title') }}</h2>
+        <p>{{ t('rgpd.sections.retention.text1') }}</p>
+        <p>{{ t('rgpd.sections.retention.text2') }}</p>
 
-        <h2>Sécurité et confidentialité</h2>
-        <p>
-          La protection, la sécurité et la confidentialité de vos données est une priorité.
-          Le Restaurant maintient un environnement informatique sécurisé et met en œuvre
-          des mesures adaptées au degré de sensibilité des données.
-        </p>
+        <!-- STOCKAGE -->
+        <h2>{{ t('rgpd.sections.storage.title') }}</h2>
+        <p>{{ t('rgpd.sections.storage.text1') }}</p>
+        <p>{{ t('rgpd.sections.storage.text2') }}</p>
+        <p>{{ t('rgpd.sections.storage.text3') }}</p>
 
+        <!-- DROITS -->
+        <h2>{{ t('rgpd.sections.rights.title') }}</h2>
+        <p>{{ t('rgpd.sections.rights.text') }}</p>
         <p>
-          L’accès aux données est limité aux collaborateurs du Restaurant
-          ou prestataires agissant pour son compte, strictement dans le cadre de leurs missions.
-          Les personnes ayant accès aux données sont tenues à une obligation de confidentialité.
-        </p>
-
-        <h2>Durée de conservation</h2>
-        <p>
-          Vous avez le droit de faire supprimer vos données personnelles à tout instant.
-          Si vous ne demandez pas cette suppression, elles sont conservées uniquement
-          pendant le temps raisonnablement nécessaire pour fournir le service,
-          l’améliorer et satisfaire aux obligations légales applicables.
-        </p>
-
-        <p>
-          Au-delà, vos données personnelles sont supprimées de nos bases.
-          Dans le respect des obligations légales, le Restaurant conserve les données
-          consommateur et bancaires pendant le temps nécessaire aux finalités du traitement.
-        </p>
-
-        <h2>Stockage et transferts</h2>
-        <p>
-          Les données sont stockées par le Restaurant dans ses centres de traitement
-          ou ceux de ses sous-traitants, dans le respect de la législation française
-          et de la réglementation européenne.
-        </p>
-
-        <p>
-          Les prestataires agissant en sous-traitance sont liés par contrat,
-          assurant un haut niveau de confidentialité et de sécurité.
-          Vos données sont stockées en France ou dans un pays de l’Union Européenne.
-        </p>
-
-        <p>
-          Certaines données peuvent être transmises à des tiers uniquement
-          pour satisfaire à des obligations légales, réglementaires ou aux autorités habilitées.
-        </p>
-
-        <h2>Exercice de vos droits</h2>
-        <p>
-          Conformément à la réglementation, vous disposez de droits :
-          accès, rectification, suppression (droit à l’oubli), opposition,
-          limitation, portabilité.
-        </p>
-
-        <p>
-          Pour exercer ces droits, vous pouvez contacter :
-          <strong>Restaurant Lait Thym Sel, 17 rue Boisnet – 49100 Angers</strong>.
-        </p>
-
-        <p>
-          Vous pouvez également exercer vos droits auprès de partenaires de réservation
-          pour les données déposées sur leurs services :
+          <strong>{{ t('rgpd.sections.rights.contact') }}</strong>
         </p>
 
         <ul>
-          <li><strong>Zenchef</strong> – Service marketing – 120-122 rue Réaumur – 75002 Paris</li>
-          <li><strong>SecretBox</strong> –
-            <a href="https://www.secretbox.fr/nous-contacter" target="_blank" rel="noopener">
-              https://www.secretbox.fr/nous-contacter
+          <li v-for="(partner, i) in partners" :key="i">
+            <strong>{{ partner.name }}</strong>
+            <span v-if="partner.text"> — {{ partner.text }}</span>
+            <a
+              v-if="partner.link"
+              :href="partner.link"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ partner.link }}
             </a>
           </li>
         </ul>
 
-        <p>
-          Si vous estimez être victime d’une violation de vos droits,
-          vous pouvez introduire une réclamation auprès de la <strong>CNIL</strong>.
-        </p>
+        <p>{{ t('rgpd.sections.rights.cnil') }}</p>
       </article>
 
       <footer class="rgpd-footer">
         <span>
-          Site conçu et réalisé par
+          {{ t('common.credit') }}
           <a href="https://maisondellalucia.fr" target="_blank" rel="noopener">
             Maison della Lucia
           </a>
@@ -168,6 +116,7 @@
     </div>
   </section>
 </template>
+
 
 <style scoped>
 /* =========================================================

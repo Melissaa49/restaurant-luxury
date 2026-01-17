@@ -1,15 +1,10 @@
 <template>
   <section class="legal-page">
-
-    <!-- EN-TÊTE -->
     <header class="legal-header">
-      <span class="legal-kicker">
-        {{ t('legal.kicker') }}
-      </span>
+      <span class="legal-kicker">{{ t('legal.kicker') }}</span>
       <h1>{{ t('legal.title') }}</h1>
     </header>
 
-    <!-- CONTENU -->
     <div class="legal-content">
 
       <section class="legal-section">
@@ -27,48 +22,28 @@
       </section>
 
       <section class="legal-section">
-        <h2>{{ t('legal.section3.title') }}</h2>
-        <p>{{ t('legal.section3.p1') }}</p>
-        <p>{{ t('legal.section3.p2') }}</p>
-        <p>
-          {{ t('legal.section3.contact') }}
-          <strong>contact@laitthymsel.fr</strong>
-        </p>
-      </section>
-
-      <section class="legal-section">
-        <h2>{{ t('legal.section4.title') }}</h2>
-        <p>{{ t('legal.section4.p1') }}</p>
-        <p>
-          {{ t('legal.section4.p2') }}
-          <a
-            href="https://laitthymsel.com/politique-des-cookies/"
-            target="_blank"
-            rel="noopener"
-          >
-            {{ t('legal.section4.link') }}
-          </a>.
-        </p>
-      </section>
-
-      <section class="legal-section">
-        <h2>{{ t('legal.section5.title') }}</h2>
-        <p>{{ t('legal.section5.p1') }}</p>
-      </section>
-
-      <section class="legal-section">
         <h2>{{ t('legal.section6.title') }}</h2>
 
-        <p v-html="t('legal.section6.owner')" />
-        <p v-html="t('legal.section6.company')" />
-        <p v-html="t('legal.section6.publisher')" />
-        <p v-html="t('legal.section6.creator')" />
-        <p>{{ t('legal.section6.hosting') }}</p>
+        <p>
+          <strong>{{ t('legal.section6.owner.label') }}</strong><br />
+          {{ t('legal.section6.owner.name') }}<br />
+          {{ t('legal.section6.owner.address') }}<br />
+          {{ t('legal.section6.owner.phone') }}<br />
+          <a :href="`mailto:${t('legal.section6.owner.email')}`">
+            {{ t('legal.section6.owner.email') }}
+          </a>
+        </p>
+
+        <p>
+          {{ t('legal.section6.company.capital') }}<br />
+          {{ t('legal.section6.company.rcs') }}<br />
+          {{ t('legal.section6.company.ape') }}
+        </p>
+
         <p>{{ t('legal.section6.credits') }}</p>
       </section>
 
     </div>
-
   </section>
 </template>
 
@@ -76,6 +51,7 @@
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 </script>
+
 
 <style scoped>
 /* =========================================================
