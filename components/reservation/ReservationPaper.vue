@@ -2,9 +2,7 @@
   <section class="reservation-section">
     <div class="paper">
 
-      <!-- =========================
-           FORMULAIRE
-      ========================== -->
+      <!-- FORMULAIRE -->
       <template v-if="!confirmed">
         <header class="paper-header">
           <h1>{{ t('reservation.title') }}</h1>
@@ -34,12 +32,14 @@
             <label>{{ t('reservation.fields.service') }}</label>
             <div class="service-toggle">
               <button
+                type="button"
                 :class="{ active: service === 'dejeuner' }"
                 @click="service = 'dejeuner'"
               >
                 {{ t('reservation.service.lunch') }}
               </button>
               <button
+                type="button"
                 :class="{ active: service === 'diner' }"
                 @click="service = 'diner'"
               >
@@ -55,6 +55,7 @@
               <button
                 v-for="time in times"
                 :key="time"
+                type="button"
                 :class="{ active: selectedTime === time }"
                 @click="selectedTime = time"
               >
@@ -64,23 +65,15 @@
           </div>
 
           <!-- CTA -->
-          <button
-            class="cta"
-            :disabled="!canConfirm"
-            @click="confirm"
-          >
+          <button class="cta" :disabled="!canConfirm" @click="confirm">
             {{ t('reservation.cta.confirm') }}
           </button>
 
-          <small>
-            {{ t('reservation.note') }}
-          </small>
+          <small>{{ t('reservation.note') }}</small>
         </div>
       </template>
 
-      <!-- =========================
-           CONFIRMATION
-      ========================== -->
+      <!-- CONFIRMATION -->
       <template v-else>
         <header class="paper-header confirm">
           <span class="confirm-kicker">
@@ -120,7 +113,6 @@ import { useI18n } from 'vue-i18n'
 const { t, locale } = useI18n()
 
 const confirmed = ref(false)
-
 const date = ref('')
 const guests = ref(2)
 const service = ref<'dejeuner' | 'diner'>('dejeuner')
@@ -130,9 +122,7 @@ const lunchTimes = ['12:00', '12:15', '12:30', '12:45']
 const dinnerTimes = ['19:30', '19:45', '20:00', '20:15', '20:30']
 
 const times = computed(() =>
-  service.value === 'dejeuner'
-    ? lunchTimes
-    : dinnerTimes
+  service.value === 'dejeuner' ? lunchTimes : dinnerTimes
 )
 
 watch(service, () => {
@@ -140,7 +130,7 @@ watch(service, () => {
 })
 
 const canConfirm = computed(() =>
-  date.value && guests.value && service.value && selectedTime.value
+  Boolean(date.value && guests.value && selectedTime.value)
 )
 
 const serviceLabel = computed(() =>
@@ -153,11 +143,7 @@ const formattedDate = computed(() => {
   if (!date.value) return ''
   return new Date(date.value).toLocaleDateString(
     locale.value === 'en' ? 'en-US' : 'fr-FR',
-    {
-      weekday: 'long',
-      day: 'numeric',
-      month: 'long'
-    }
+    { weekday: 'long', day: 'numeric', month: 'long' }
   )
 })
 
@@ -165,6 +151,8 @@ function confirm() {
   confirmed.value = true
 }
 </script>
+
+
 
 
 
