@@ -1,16 +1,16 @@
 <template>
-  <div class="embed">
-    <iframe
-      src="https://reservation.zenchef.com/"
-      loading="lazy"
-    />
-  </div>
+  <iframe
+    class="zenchef"
+    src=""
+    loading="lazy"
+  />
 </template>
 
 <style scoped>
-iframe {
+.zenchef {
   width: 100%;
-  height: 720px;
+  height: 520px;
   border: none;
+  border-radius: 4px;
 }
 </style>

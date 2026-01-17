@@ -12,4 +12,6 @@
   --text-muted: rgba(255,255,255,.6);
 
   --radius: 2px;
+    --header-height-mobile: 148px;
+  --header-height-desktop: 168px;
 }

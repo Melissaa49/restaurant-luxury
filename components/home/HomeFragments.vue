@@ -5,17 +5,17 @@
 
       <!-- HAUT GAUCHE -->
       <figure class="item item-plat">
-        <img src="/images/plat-1.png" alt="Plat signature" />
+        <img src="/images/plat-2.png" alt="Plat signature" />
       </figure>
 
       <!-- MILIEU DROITE -->
       <figure class="item item-table">
-        <img src="/images/table-1.png" alt="Salle du restaurant" />
+        <img src="/images/table-2.png" alt="Salle du restaurant" />
       </figure>
 
       <!-- BAS GAUCHE -->
       <figure class="item item-chef">
-        <img src="/images/chef-1.png" alt="Le chef en cuisine" />
+        <img src="/images/chef-2.png" alt="Le chef en cuisine" />
       </figure>
 
     </div>
@@ -45,6 +45,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+   min-height: calc(100vh - 160px);
 }
 
 /* =========================================================

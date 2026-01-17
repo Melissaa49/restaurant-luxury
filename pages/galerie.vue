@@ -1,53 +1,101 @@
 <template>
+  <HeaderSpacer />
+
   <Section dark>
-    <h1 class="title">Galerie</h1>
+    <div class="gallery-container">
 
-    <div class="stack">
-      <img class="photo" src="/images/table.png" alt="Salle" />
+      <figure class="media media--intro">
+        <img src="/images/table.png" alt="Salle" />
+      </figure>
+
       <Divider />
 
-      <div class="texture" aria-hidden="true" />
+      <figure class="media media--texture" aria-hidden="true" />
+
       <Divider />
 
-      <img class="photo" src="/images/plat.png" alt="Plat" />
+      <figure class="media">
+        <img src="/images/plat.png" alt="Plat" />
+      </figure>
+
       <Divider />
 
-      <img class="photo" src="/images/chef.png" alt="Chef" />
+      <figure class="media">
+        <img src="/images/chef.png" alt="Chef" />
+      </figure>
+
     </div>
   </Section>
 </template>
 
 <script setup lang="ts">
-import Section from '../components/ui/Section.vue'
-import Divider from '../components/ui/Divider.vue'
+import HeaderSpacer from '@/components/navigation/HeaderSpacer.vue'
+import Section from '@/components/ui/Section.vue'
+import Divider from '@/components/ui/Divider.vue'
 </script>
 
 <style scoped>
-.title {
-  text-align: center;
-  font-family: var(--font-title);
-  font-size: 34px;
-  margin: 0 0 36px;
-  letter-spacing: .04em;
+.gallery-container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  /* ❌ padding supprimé */
 }
 
-.stack {
-  max-width: 920px;
-  margin: 0 auto;
-}
-
-.photo {
+/* BASE LUXE */
+.media {
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  overflow: hidden;
   border-radius: 2px;
-  box-shadow: 0 30px 60px rgba(0,0,0,.35);
+
+  box-shadow:
+    0 26px 56px rgba(0,0,0,.4),
+    inset 0 0 0 1px rgba(255,255,255,.04);
 }
 
-.texture {
+.media img {
   width: 100%;
-  height: 90px;
-  border-radius: 2px;
-  background: url('/images/texture-stone.jpg') center/cover no-repeat;
-  opacity: .8;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
+
+
+/* MOBILE FIRST */
+.media--intro {
+  height: 180px; /* ← PAS TROP HAUT */
+}
+
+.media:not(.media--intro):not(.media--texture) {
+  height: 260px;
+}
+
+.media--texture {
+  height: 110px;
+  background: url('/images/fond-mineral.png') center/cover no-repeat;
+  opacity: .9;
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .gallery-container {
+    padding: 0;
+  }
+
+  .media--intro {
+    height: 260px;
+  }
+
+  .media:not(.media--intro):not(.media--texture) {
+    height: 440px;
+  }
+
+  .media--texture {
+    height: 180px;
+  }
+}
+
 </style>

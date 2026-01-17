@@ -2,13 +2,20 @@
   <div>
     <header class="site-header">
       <div class="top-row">
-        <img
-          src="/images/logo-or.png"
-          alt="Logo Lait Thym Sel"
-          class="logo"
-        />
 
-        <span class="brand">LAIT THYM SEL</span>
+        <!-- LOGO → ACCUEIL -->
+        <NuxtLink to="/" class="home-link logo-link">
+          <img
+            src="/images/logo-or.png"
+            alt="Logo Lait Thym Sel"
+            class="logo"
+          />
+        </NuxtLink>
+
+        <!-- TITRE → ACCUEIL -->
+        <NuxtLink to="/" class="home-link brand">
+          LAIT THYM SEL
+        </NuxtLink>
 
         <div />
       </div>
@@ -29,6 +36,9 @@
 </template>
 
 <style scoped>
+/* =========================================================
+   HEADER
+========================================================= */
 .site-header {
   position: absolute;
   top: 0;
@@ -45,15 +55,24 @@
   align-items: center;
 }
 
-/* LOGO GRAND */
-.logo {
+/* LIEN ACCUEIL (NEUTRE) */
+.home-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* LOGO */
+.logo-link {
   justify-self: start;
-  width: 100px; /* ← TAILLE COMME TA CAPTURE */
+}
+
+.logo {
+  width: 100px;
   opacity: .95;
   filter: drop-shadow(0 0 10px rgba(200,170,110,.45));
 }
 
-/* TEXTE CENTRÉ RÉEL */
+/* TITRE */
 .brand {
   justify-self: center;
   font-family: var(--font-title);
@@ -84,6 +103,8 @@
 
 .main-nav a {
   opacity: .7;
+  color: inherit;
+  text-decoration: none;
 }
 
 .main-nav a.router-link-active {

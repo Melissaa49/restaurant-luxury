@@ -1,11 +1,7 @@
 <template>
-  <section class="paper">
-    <h1>Réserver une table</h1>
-    <p>Nous vous accueillons sur réservation uniquement.</p>
-    <ZenChefEmbed />
-  </section>
+  <ReservationPaper />
 </template>
 
 <script setup lang="ts">
-import ZenChefEmbed from '../components/reservation/ZenChefEmbed.vue'
+import ReservationPaper from '../components/reservation/ReservationPaper.vue'
 </script>
