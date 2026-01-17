@@ -2,7 +2,9 @@
   <section class="reservation-section">
     <div class="paper">
 
-      <!-- ÉTAT : FORMULAIRE -->
+      <!-- =========================
+           FORMULAIRE
+      ========================== -->
       <template v-if="!confirmed">
         <header class="paper-header">
           <h1>Réserver une table.</h1>
@@ -12,41 +14,76 @@
           </p>
         </header>
 
-        <div class="form-mock">
+        <div class="form">
 
+          <!-- DATE -->
           <div class="field">
-            <span>Date</span>
-            <div class="input">mercredi 24 avril</div>
+            <label>Date</label>
+            <input type="date" v-model="date" />
           </div>
 
+          <!-- CONVIVES -->
           <div class="field">
-            <span>Nombre de convives</span>
-            <div class="input">2 convives</div>
+            <label>Convives</label>
+            <select v-model="guests">
+              <option v-for="n in 6" :key="n" :value="n">
+                {{ n }} convive{{ n > 1 ? 's' : '' }}
+              </option>
+            </select>
           </div>
 
+          <!-- SERVICE -->
           <div class="field">
-            <span>Service</span>
-            <div class="input">Déjeuner</div>
+            <label>Service</label>
+            <div class="service-toggle">
+              <button
+                :class="{ active: service === 'dejeuner' }"
+                @click="service = 'dejeuner'"
+              >
+                Déjeuner
+              </button>
+              <button
+                :class="{ active: service === 'diner' }"
+                @click="service = 'diner'"
+              >
+                Dîner
+              </button>
+            </div>
           </div>
 
-          <div class="times">
-            <button>12:00</button>
-            <button>12:15</button>
-            <button>12:30</button>
-            <button>12:45</button>
+          <!-- HORAIRES -->
+          <div class="field">
+            <label>Horaire</label>
+            <div class="times">
+              <button
+                v-for="time in times"
+                :key="time"
+                :class="{ active: selectedTime === time }"
+                @click="selectedTime = time"
+              >
+                {{ time }}
+              </button>
+            </div>
           </div>
 
-          <button class="cta" @click="confirm">
+          <!-- CTA -->
+          <button
+            class="cta"
+            :disabled="!canConfirm"
+            @click="confirm"
+          >
             Confirmer la réservation
           </button>
 
           <small>
-            Réservation en ligne
+            Réservation en ligne — confirmation immédiate
           </small>
         </div>
       </template>
 
-      <!-- ÉTAT : CONFIRMATION -->
+      <!-- =========================
+           CONFIRMATION
+      ========================== -->
       <template v-else>
         <header class="paper-header confirm">
           <span class="confirm-kicker">Confirmation</span>
@@ -58,11 +95,10 @@
         </header>
 
         <div class="confirmation">
-
           <div class="recap">
-            <p><strong>Mercredi 24 avril</strong></p>
-            <p>Déjeuner · 12:30</p>
-            <p>2 convives</p>
+            <p><strong>{{ formattedDate }}</strong></p>
+            <p>{{ serviceLabel }} · {{ selectedTime }}</p>
+            <p>{{ guests }} convive{{ guests > 1 ? 's' : '' }}</p>
           </div>
 
           <p class="confirm-note">
@@ -73,7 +109,6 @@
           <NuxtLink to="/" class="cta outline">
             Retour à l’accueil
           </NuxtLink>
-
         </div>
       </template>
 
@@ -82,18 +117,69 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed, watch } from 'vue'
 
 const confirmed = ref(false)
+
+const date = ref('')
+const guests = ref(2)
+const service = ref<'dejeuner' | 'diner'>('dejeuner')
+const selectedTime = ref('')
+
+/* =========================
+   HORAIRES PAR SERVICE
+========================= */
+const lunchTimes = ['12:00', '12:15', '12:30', '12:45']
+const dinnerTimes = ['19:30', '19:45', '20:00', '20:15', '20:30']
+
+/* =========================
+   HORAIRES COURANTS
+========================= */
+const times = computed(() => {
+  return service.value === 'dejeuner'
+    ? lunchTimes
+    : dinnerTimes
+})
+
+/* =========================
+   RESET HORAIRE AU CHANGEMENT
+========================= */
+watch(service, () => {
+  selectedTime.value = ''
+})
+
+/* =========================
+   VALIDATION
+========================= */
+const canConfirm = computed(() =>
+  date.value &&
+  guests.value &&
+  service.value &&
+  selectedTime.value
+)
+
+const serviceLabel = computed(() =>
+  service.value === 'dejeuner' ? 'Déjeuner' : 'Dîner'
+)
+
+const formattedDate = computed(() => {
+  if (!date.value) return ''
+  return new Date(date.value).toLocaleDateString('fr-FR', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long'
+  })
+})
 
 function confirm() {
   confirmed.value = true
 }
 </script>
 
+
 <style scoped>
 /* =========================================================
-   PAGE — FOND NOIR
+   PAGE
 ========================================================= */
 .reservation-section {
   padding: 160px 16px 220px;
@@ -103,19 +189,18 @@ function confirm() {
 }
 
 /* =========================================================
-   CARTE PAPIER
+   CARTE
 ========================================================= */
 .paper {
   width: 100%;
   max-width: 420px;
   background: url('/images/fond-mineral.png') center / cover no-repeat;
   border-radius: 6px;
+  padding: 40px 28px 48px;
 
   box-shadow:
     0 50px 100px rgba(0,0,0,.45),
     inset 0 0 0 1px rgba(0,0,0,.06);
-
-  padding: 40px 28px 48px;
 }
 
 /* =========================================================
@@ -125,10 +210,6 @@ function confirm() {
   text-align: center;
   margin-bottom: 36px;
   color: #2a2623;
-}
-
-.paper-header.confirm {
-  margin-bottom: 28px;
 }
 
 .paper-header h1 {
@@ -145,25 +226,24 @@ function confirm() {
 }
 
 .confirm-kicker {
-  display: block;
   font-size: 11px;
-  letter-spacing: .24em;
-  text-transform: uppercase;
-  color: rgba(160,130,90,.9);
+  letter-spacing: .28em;
+  color: var(--gold);
   margin-bottom: 10px;
+  display: block;
 }
 
 /* =========================================================
-   FORMULAIRE FAKE
+   FORM
 ========================================================= */
-.form-mock {
+.form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
   color: #2a2623;
 }
 
-.field span {
+.field label {
   display: block;
   font-size: 12px;
   letter-spacing: .14em;
@@ -171,12 +251,35 @@ function confirm() {
   opacity: .65;
 }
 
-.input {
+input,
+select {
+  width: 100%;
   padding: 14px;
   border-radius: 4px;
-  background: rgba(255,255,255,.75);
-  border: 1px solid rgba(0,0,0,.15);
+  border: 1px solid rgba(0,0,0,.2);
+  background: rgba(255,255,255,.8);
   font-size: 15px;
+  color: #2a2623;
+}
+
+/* SERVICE */
+.service-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.service-toggle button {
+  flex: 1;
+  padding: 12px 0;
+  border: 1px solid rgba(160,130,90,.6);
+  background: transparent;
+  font-family: var(--font-title);
+  cursor: pointer;
+}
+
+.service-toggle button.active {
+  background: rgba(160,130,90,.18);
+  border-color: var(--gold);
 }
 
 /* HORAIRES */
@@ -184,55 +287,42 @@ function confirm() {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
-  margin-top: 8px;
 }
 
 .times button {
   padding: 12px 0;
-  border-radius: 4px;
+  border: 1px solid rgba(160,130,90,.6);
   background: transparent;
-  border: 1px solid rgba(0,0,0,.25);
   font-family: var(--font-title);
   cursor: pointer;
+}
+
+.times button.active {
+  background: rgba(160,130,90,.18);
+  border-color: var(--gold);
 }
 
 /* CTA */
 .cta {
   margin-top: 18px;
   padding: 14px;
-
+  border: 1px solid var(--gold);
   background: transparent;
-  border: 1px solid rgba(160,130,90,.8);
-  color: #2a2623;
-
   font-family: var(--font-title);
-  letter-spacing: .08em;
+  letter-spacing: .1em;
   cursor: pointer;
-
-  transition: all .35s ease;
-  text-align: center;
-  text-decoration: none;
 }
 
-.cta:hover {
-  background: rgba(160,130,90,.12);
+.cta:disabled {
+  opacity: .4;
+  cursor: not-allowed;
 }
 
 .cta.outline {
   margin-top: 26px;
 }
 
-/* FOOTNOTE */
-small {
-  margin-top: 6px;
-  font-size: 12px;
-  text-align: center;
-  opacity: .6;
-}
-
-/* =========================================================
-   CONFIRMATION
-========================================================= */
+/* CONFIRMATION */
 .confirmation {
   text-align: center;
   color: #2a2623;
@@ -250,9 +340,7 @@ small {
   margin-bottom: 28px;
 }
 
-/* =========================================================
-   DESKTOP
-========================================================= */
+/* DESKTOP */
 @media (min-width: 1024px) {
   .paper {
     max-width: 520px;
