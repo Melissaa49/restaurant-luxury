@@ -7,53 +7,50 @@
       ========================== -->
       <template v-if="!confirmed">
         <header class="paper-header">
-          <h1>Réserver une table.</h1>
-          <p>
-            Nous vous accueillons<br />
-            sur réservation uniquement.
-          </p>
+          <h1>{{ t('reservation.title') }}</h1>
+          <p v-html="t('reservation.intro')" />
         </header>
 
         <div class="form">
 
           <!-- DATE -->
           <div class="field">
-            <label>Date</label>
+            <label>{{ t('reservation.fields.date') }}</label>
             <input type="date" v-model="date" />
           </div>
 
           <!-- CONVIVES -->
           <div class="field">
-            <label>Convives</label>
+            <label>{{ t('reservation.fields.guests') }}</label>
             <select v-model="guests">
               <option v-for="n in 6" :key="n" :value="n">
-                {{ n }} convive{{ n > 1 ? 's' : '' }}
+                {{ n }} {{ t('reservation.guests', n) }}
               </option>
             </select>
           </div>
 
           <!-- SERVICE -->
           <div class="field">
-            <label>Service</label>
+            <label>{{ t('reservation.fields.service') }}</label>
             <div class="service-toggle">
               <button
                 :class="{ active: service === 'dejeuner' }"
                 @click="service = 'dejeuner'"
               >
-                Déjeuner
+                {{ t('reservation.service.lunch') }}
               </button>
               <button
                 :class="{ active: service === 'diner' }"
                 @click="service = 'diner'"
               >
-                Dîner
+                {{ t('reservation.service.dinner') }}
               </button>
             </div>
           </div>
 
           <!-- HORAIRES -->
           <div class="field">
-            <label>Horaire</label>
+            <label>{{ t('reservation.fields.time') }}</label>
             <div class="times">
               <button
                 v-for="time in times"
@@ -72,11 +69,11 @@
             :disabled="!canConfirm"
             @click="confirm"
           >
-            Confirmer la réservation
+            {{ t('reservation.cta.confirm') }}
           </button>
 
           <small>
-            Réservation en ligne — confirmation immédiate
+            {{ t('reservation.note') }}
           </small>
         </div>
       </template>
@@ -86,28 +83,28 @@
       ========================== -->
       <template v-else>
         <header class="paper-header confirm">
-          <span class="confirm-kicker">Confirmation</span>
-          <h1>Votre table est réservée.</h1>
-          <p>
-            Nous avons le plaisir de vous<br />
-            confirmer votre réservation.
-          </p>
+          <span class="confirm-kicker">
+            {{ t('reservation.confirmation.kicker') }}
+          </span>
+          <h1>{{ t('reservation.confirmation.title') }}</h1>
+          <p v-html="t('reservation.confirmation.intro')" />
         </header>
 
         <div class="confirmation">
           <div class="recap">
             <p><strong>{{ formattedDate }}</strong></p>
             <p>{{ serviceLabel }} · {{ selectedTime }}</p>
-            <p>{{ guests }} convive{{ guests > 1 ? 's' : '' }}</p>
+            <p>
+              {{ guests }} {{ t('reservation.guests', guests) }}
+            </p>
           </div>
 
           <p class="confirm-note">
-            Un e-mail de confirmation vous sera adressé
-            avec les détails de votre réservation.
+            {{ t('reservation.confirmation.note') }}
           </p>
 
           <NuxtLink to="/" class="cta outline">
-            Retour à l’accueil
+            {{ t('reservation.cta.back') }}
           </NuxtLink>
         </div>
       </template>
@@ -118,6 +115,9 @@
 
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t, locale } = useI18n()
 
 const confirmed = ref(false)
 
@@ -126,55 +126,46 @@ const guests = ref(2)
 const service = ref<'dejeuner' | 'diner'>('dejeuner')
 const selectedTime = ref('')
 
-/* =========================
-   HORAIRES PAR SERVICE
-========================= */
 const lunchTimes = ['12:00', '12:15', '12:30', '12:45']
 const dinnerTimes = ['19:30', '19:45', '20:00', '20:15', '20:30']
 
-/* =========================
-   HORAIRES COURANTS
-========================= */
-const times = computed(() => {
-  return service.value === 'dejeuner'
+const times = computed(() =>
+  service.value === 'dejeuner'
     ? lunchTimes
     : dinnerTimes
-})
+)
 
-/* =========================
-   RESET HORAIRE AU CHANGEMENT
-========================= */
 watch(service, () => {
   selectedTime.value = ''
 })
 
-/* =========================
-   VALIDATION
-========================= */
 const canConfirm = computed(() =>
-  date.value &&
-  guests.value &&
-  service.value &&
-  selectedTime.value
+  date.value && guests.value && service.value && selectedTime.value
 )
 
 const serviceLabel = computed(() =>
-  service.value === 'dejeuner' ? 'Déjeuner' : 'Dîner'
+  service.value === 'dejeuner'
+    ? t('reservation.service.lunch')
+    : t('reservation.service.dinner')
 )
 
 const formattedDate = computed(() => {
   if (!date.value) return ''
-  return new Date(date.value).toLocaleDateString('fr-FR', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long'
-  })
+  return new Date(date.value).toLocaleDateString(
+    locale.value === 'en' ? 'en-US' : 'fr-FR',
+    {
+      weekday: 'long',
+      day: 'numeric',
+      month: 'long'
+    }
+  )
 })
 
 function confirm() {
   confirmed.value = true
 }
 </script>
+
 
 
 <style scoped>

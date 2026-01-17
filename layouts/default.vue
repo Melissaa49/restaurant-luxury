@@ -17,23 +17,60 @@
           LAIT THYM SEL
         </NuxtLink>
 
-        <div />
+        <!-- LANGUES -->
+        <div class="lang-switch">
+          <button
+            :class="{ active: locale === 'fr' }"
+            @click="switchLang('fr')"
+          >
+            FR
+          </button>
+          <span>|</span>
+          <button
+            :class="{ active: locale === 'en' }"
+            @click="switchLang('en')"
+          >
+            EN
+          </button>
+        </div>
+
       </div>
 
       <div class="divider"></div>
 
+      <!-- NAVIGATION -->
       <nav class="main-nav">
-        <NuxtLink to="/menu">MENUS</NuxtLink>
+        <NuxtLink to="/menu">
+          {{ t('nav.menu') }}
+        </NuxtLink>
+
         <span>|</span>
-        <NuxtLink to="/galerie">GALERIE</NuxtLink>
+
+        <NuxtLink to="/galerie">
+          {{ t('nav.galerie') }}
+        </NuxtLink>
+
         <span>|</span>
-        <NuxtLink to="/reserver">RÉSERVER</NuxtLink>
+
+        <NuxtLink to="/reserver">
+          {{ t('nav.reserver') }}
+        </NuxtLink>
       </nav>
     </header>
 
     <slot />
   </div>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { locale, t } = useI18n()
+
+function switchLang(lang: 'fr' | 'en') {
+  locale.value = lang
+}
+</script>
 
 <style scoped>
 /* =========================================================
@@ -48,14 +85,14 @@
   text-align: center;
 }
 
-/* ALIGNEMENT OPTIQUE */
+/* ALIGNEMENT */
 .top-row {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
 
-/* LIEN ACCUEIL (NEUTRE) */
+/* LIEN ACCUEIL */
 .home-link {
   color: inherit;
   text-decoration: none;
@@ -79,6 +116,47 @@
   font-size: 18px;
   letter-spacing: .32em;
 }
+
+/* LANG SWITCH */
+/* LANG SWITCH — FIN & ITALIQUE */
+.lang-switch {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 6px;          /* plus petit */
+  letter-spacing: .14em;  /* plus serré */
+  font-style: italic;     /* élégance */
+}
+
+.lang-switch button {
+  background: none;
+  border: none;
+  padding: 0;
+
+  font-family: var(--font-title);
+  font-style: italic;
+
+  color: rgba(235, 225, 210, .45);
+  cursor: pointer;
+  transition: color .3s ease, opacity .3s ease;
+}
+
+.lang-switch button:hover {
+  color: rgba(235, 225, 210, .7);
+}
+
+.lang-switch button.active {
+  color: var(--gold);
+  opacity: 1;
+}
+
+.lang-switch span {
+  opacity: .3;
+  font-size: 9px;
+}
+
 
 /* DIVIDER */
 .divider {

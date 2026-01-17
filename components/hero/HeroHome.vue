@@ -4,19 +4,25 @@
 
     <div class="content">
       <p class="headline">
-        Une table, un instant, une cuisine.
+        {{ t('hero.headline') }}
       </p>
 
       <p class="subtitle">
-        Cuisine gastronomique à Angers
+        {{ t('hero.subtitle') }}
       </p>
 
       <NuxtLink to="/reserver" class="cta">
-        RÉSERVER UNE TABLE
+        {{ t('hero.cta') }}
       </NuxtLink>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>
 
 <style scoped>
 .hero {
@@ -44,7 +50,7 @@
   position: relative;
   z-index: 2;
   height: 100%;
-  padding-top: 140px; /* ← espace header */
+  padding-top: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;

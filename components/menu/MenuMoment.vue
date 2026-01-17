@@ -2,7 +2,9 @@
   <section class="menu-moment">
 
     <!-- TITRE -->
-    <h2 class="menu-title">Les menus</h2>
+    <h2 class="menu-title">
+      {{ t('menu.title') }}
+    </h2>
 
     <!-- WRAPPER -->
     <div class="menu-wrapper">
@@ -13,74 +15,43 @@
         class="menu-carousel"
         @scroll="onScroll"
       >
+
         <!-- MENU SOLAIRE -->
         <article class="menu-panel">
-          <span class="panel-kicker">DÉJEUNER · SOLAIRE</span>
+          <span class="panel-kicker">
+            {{ lunch.kicker }}
+          </span>
 
-          <div class="acte">
+          <div
+            v-for="(item, index) in lunch.items"
+            :key="index"
+            class="acte"
+          >
             <span class="line"></span>
-            <em>Mise en lumière</em>
-            <p>
-              Menu en <strong>3 étincelles</strong><br />
-              Service possible en 1 heure<br />
-              Pour celles et ceux disposant d’un temps limité
-            </p>
-            <span class="price">49 €</span>
-          </div>
-
-          <div class="acte">
-            <span class="line"></span>
-            <em>Le chant des flammes</em>
-            <p>
-              Menu en <strong>6 étincelles</strong><br />
-              Version végétarienne sur demande
-            </p>
-            <span class="price">95 €</span>
-          </div>
-
-          <div class="acte">
-            <span class="line"></span>
-            <em>La danse du feu</em>
-            <p>
-              Menu en <strong>9 étincelles</strong>
-            </p>
-            <span class="price">145 €</span>
+            <em>{{ item.title }}</em>
+            <p v-html="item.description" />
+            <span class="price">{{ item.price }}</span>
           </div>
         </article>
 
         <!-- MENU LUNAIRE -->
         <article class="menu-panel">
-          <span class="panel-kicker">DÎNER · LUNAIRE</span>
+          <span class="panel-kicker">
+            {{ dinner.kicker }}
+          </span>
 
-          <div class="acte">
+          <div
+            v-for="(item, index) in dinner.items"
+            :key="index"
+            class="acte"
+          >
             <span class="line"></span>
-            <em>Incandescence</em>
-            <p>
-              Menu en <strong>5 étincelles</strong><br />
-              Servi du mardi au jeudi
-            </p>
-            <span class="price">85 €</span>
-          </div>
-
-          <div class="acte">
-            <span class="line"></span>
-            <em>Crépitement des étoiles</em>
-            <p>
-              Menu en <strong>7 étincelles</strong><br />
-              Version végétarienne sur demande
-            </p>
-            <span class="price">120 €</span>
-          </div>
-
-          <div class="acte">
-            <span class="line"></span>
-            <em>La danse du feu</em>
-            <p>
-              Menu en <strong>9 étincelles</strong>
-            </p>
-            <span class="price">145 €</span>
+            <em>{{ item.title }}</em>
+            <p v-html="item.description" />
+            <span class="price">{{ item.price }}</span>
           </div>
         </article>
+
       </div>
 
       <!-- INDICATEURS -->
@@ -96,19 +67,45 @@
     </div>
 
     <!-- NOTE -->
-    <p class="note">
-      Les menus ne sont pas proposés sans lactose,
-      sans gluten ou sans œuf.<br />
-      Merci de signaler toute allergie ou régime particulier
-      lors de votre réservation.
-    </p>
+    <p class="note" v-html="t('menu.note')" />
 
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+const { t, tm } = useI18n()
+
+/* =========================
+   TYPES
+========================= */
+type MenuItem = {
+  title: string
+  description: string
+  price: string
+}
+
+type MenuBlock = {
+  kicker: string
+  items: MenuItem[]
+}
+
+/* =========================
+   MENUS (tm = objets)
+========================= */
+const lunch = computed<MenuBlock>(() =>
+  tm('menu.lunch') as MenuBlock
+)
+
+const dinner = computed<MenuBlock>(() =>
+  tm('menu.dinner') as MenuBlock
+)
+
+/* =========================
+   CAROUSEL
+========================= */
 const carousel = ref<HTMLElement | null>(null)
 const activeIndex = ref(0)
 
@@ -141,6 +138,8 @@ const onScroll = () => {
   activeIndex.value = closest
 }
 </script>
+
+
 
 <style scoped>
 /* =========================================================

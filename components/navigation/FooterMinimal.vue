@@ -4,21 +4,18 @@
 
       <!-- IDENTITÉ DU LIEU -->
       <p class="footer-name">
-        Lait Thym Sel
+        {{ t('footer.name') }}
       </p>
 
       <!-- ADRESSE -->
-      <p class="footer-address">
-        17, rue Boisnet<br />
-        49100 Angers
-      </p>
+      <p class="footer-address" v-html="t('footer.address')" />
 
       <!-- TÉLÉPHONE -->
       <a
         href="tel:+33789655907"
         class="footer-phone"
       >
-        07&nbsp;89&nbsp;65&nbsp;59&nbsp;07
+        {{ t('footer.phone') }}
       </a>
 
       <!-- SÉPARATEUR -->
@@ -26,29 +23,54 @@
 
       <!-- LIENS LÉGAUX -->
       <nav class="footer-legal">
-        <NuxtLink to="/mentions-legales">Mentions légales</NuxtLink>
-        <span>•</span>
-        <NuxtLink to="/conditions-generales">Conditions générales</NuxtLink>
-        <span>•</span>
-        <NuxtLink to="/rgpd">Protection des données</NuxtLink>
-      </nav>
+  <NuxtLink to="/chefs">
+    Les chefs
+  </NuxtLink>
 
-      <!-- COPYRIGHT & CRÉDIT -->
+  <span>•</span>
+
+  <NuxtLink to="/mentions-legales">
+    {{ t('footer.legal.mentions') }}
+  </NuxtLink>
+
+  <span>•</span>
+
+  <NuxtLink to="/conditions-generales">
+    {{ t('footer.legal.terms') }}
+  </NuxtLink>
+
+  <span>•</span>
+
+  <NuxtLink to="/rgpd">
+    {{ t('footer.legal.privacy') }}
+  </NuxtLink>
+</nav>
+
+
+      <!-- COPYRIGHT -->
       <p class="footer-credit">
-        © {{ new Date().getFullYear() }} Lait Thym Sel —  
-        Site conçu par
+        © {{ new Date().getFullYear() }}
+        {{ t('footer.copyright') }}
+        —
+        {{ t('footer.credit.text') }}
         <a
           href="https://maisondellalucia.fr"
           target="_blank"
           rel="noopener"
         >
-          Maison della Lucia
+          {{ t('footer.credit.agency') }}
         </a>
       </p>
 
     </div>
   </footer>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>
 
 <style scoped>
 /* =========================================================

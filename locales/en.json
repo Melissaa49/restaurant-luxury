@@ -1,0 +1,343 @@
+{
+  "hero": {
+    "headline": "A table. A moment. A cuisine.",
+    "subtitle": "Gastronomic cuisine in Angers",
+    "cta": "RESERVE A TABLE"
+  },
+
+  "nav": {
+    "menu": "MENUS",
+    "galerie": "GALLERY",
+    "reserver": "RESERVE"
+  },
+
+  "language": {
+    "fr": "FR",
+    "en": "EN"
+  },
+  "heroReservation": {
+    "title": "The table is open.",
+    "cta": "Reserve a table"
+  },
+  "fragments": {
+    "text": "Fragments of a place<br />and a cuisine.",
+    "alt": {
+      "dish": "Signature dish",
+      "room": "Restaurant dining room",
+      "chef": "The chef at work"
+    }
+  },
+  "menu": {
+    "title": "Menus",
+
+    "lunch": {
+      "kicker": "LUNCH · SOLAR",
+      "items": [
+        {
+          "title": "Illumination",
+          "description": "Menu in <strong>3 sparks</strong><br />Served within one hour<br />Designed for limited time lunches",
+          "price": "€49"
+        },
+        {
+          "title": "Song of the Flames",
+          "description": "Menu in <strong>6 sparks</strong><br />Vegetarian version available upon request",
+          "price": "€95"
+        },
+        {
+          "title": "Dance of Fire",
+          "description": "Menu in <strong>9 sparks</strong>",
+          "price": "€145"
+        }
+      ]
+    },
+
+    "dinner": {
+      "kicker": "DINNER · LUNAR",
+      "items": [
+        {
+          "title": "Incandescence",
+          "description": "Menu in <strong>5 sparks</strong><br />Served from Tuesday to Thursday",
+          "price": "€85"
+        },
+        {
+          "title": "Starlight Crackle",
+          "description": "Menu in <strong>7 sparks</strong><br />Vegetarian version available upon request",
+          "price": "€120"
+        },
+        {
+          "title": "Dance of Fire",
+          "description": "Menu in <strong>9 sparks</strong>",
+          "price": "€145"
+        }
+      ]
+    },
+
+    "note": "Menus are not available lactose-free, gluten-free or egg-free.<br />Please inform us of any allergy or dietary requirement when booking."
+  },
+  "footer": {
+    "name": "Lait Thym Sel",
+    "address": "17, rue Boisnet<br />49100 Angers, France",
+    "phone": "+33 7 89 65 59 07",
+
+    "legal": {
+      "mentions": "Legal notice",
+      "terms": "Terms & conditions",
+      "privacy": "Data protection"
+    },
+
+    "copyright": "Lait Thym Sel",
+    "credit": {
+      "text": "Website designed by",
+      "agency": "Maison della Lucia"
+    }
+  },
+   "reservation": {
+    "title": "Reserve a table.",
+    "intro": "We welcome you<br />by reservation only.",
+
+    "fields": {
+      "date": "Date",
+      "guests": "Guests",
+      "service": "Service",
+      "time": "Time"
+    },
+
+    "guests": "guest | guests",
+
+    "service": {
+      "lunch": "Lunch",
+      "dinner": "Dinner"
+    },
+
+    "cta": {
+      "confirm": "Confirm reservation",
+      "back": "Back to home"
+    },
+
+    "note": "Online booking — instant confirmation",
+
+    "confirmation": {
+      "kicker": "Confirmation",
+      "title": "Your table is reserved.",
+      "intro": "We are pleased to<br />confirm your reservation.",
+      "note": "A confirmation email will be sent with all the details of your reservation."
+    }
+  },
+   "cgu": {
+    "title": "Terms and Conditions",
+    "intro": "These Terms and Conditions govern the relationship between the restaurant Lait Thym Sel and its customers.",
+
+    "preamble": {
+      "title": "Preamble",
+      "p1": "These Terms and Conditions govern the relationship between SARL FG2M Restaurant Lait Thym Sel, a limited liability company with a share capital of €10,000, registered under number 830 927 380 RCS Angers, operating the restaurant Lait Thym Sel (hereinafter referred to as the \"Company\"), and any individual or legal entity wishing to make a reservation request (hereinafter referred to as the \"Customer\").",
+      "p2": "The Customer expressly acknowledges having read and accepted these Terms and Conditions during the online reservation process."
+    },
+
+    "article1": {
+      "title": "Article 1 – Purpose",
+      "content": "These Terms and Conditions define the terms under which the Customer may make an online reservation request via the reservation system available on the website laitthymsel.com in order to benefit from the restaurant services offered by Lait Thym Sel, located at 17 rue Boisnet – 49100 Angers."
+    },
+
+    "article2": {
+      "title": "Article 2 – Reservation process",
+      "p1": "Online reservations are made through the form available at https://www.laitthymsel.com/reserver, powered by the Zenchef platform.",
+      "p2": "The Customer undertakes to complete all required fields, including date, service, time and number of guests.",
+      "p3": "The bank card imprint requested at the time of booking is a guarantee only and does not constitute a deposit or immediate charge."
+    },
+
+    "article3": {
+      "title": "Article 3 – Cancellation",
+      "p1": "The Customer has up to 12 hours before the scheduled time to modify or cancel the reservation.",
+      "p2": "Cancellation requests may be made:",
+      "email": "by email at: contact@laitthymsel.fr",
+      "phone": "by phone at +33 2 41 27 20 40"
+    },
+
+    "article4": {
+      "title": "Article 4 – Penalties",
+      "content": "In the event of a no-show without prior cancellation, a penalty of €500 per reserved guest may be charged."
+    },
+
+    "article5": {
+      "title": "Article 5 – Secure payment",
+      "content": "The reservation system uses the secure payment solution Payzen. Banking data is encrypted and never stored by the Company."
+    },
+
+    "article6": {
+      "title": "Article 6 – Liability",
+      "p1": "The Company undertakes to provide restaurant services under the conditions confirmed at the time of reservation.",
+      "p2": "Information displayed on the website is provided for information purposes only and is non-contractual."
+    },
+
+    "article7": {
+      "title": "Article 7 – Personal data",
+      "content": "Personal data collected during the reservation process is used solely for managing reservations."
+    },
+
+    "article8": {
+      "title": "Article 8 – Governing law",
+      "content": "These Terms and Conditions are governed by French law. Any dispute shall be submitted to the competent courts of Angers."
+    }
+  },
+
+  "common": {
+    "credit": "Website designed and developed by"
+  },
+   "legal": {
+    "kicker": "Legal information",
+    "title": "Legal notice",
+
+    "section1": {
+      "title": "1 – Information",
+      "p1": "The information published on the website laitthymsel.com is provided for information purposes only and is non-contractual.",
+      "p2": "Lait Thym Sel makes every effort to ensure that the information available on the website is accurate and up to date.",
+      "p3": "Lait Thym Sel shall not be held liable for any damage resulting from access to or use of the website."
+    },
+
+    "section2": {
+      "title": "2 – Intellectual property",
+      "p1": "The website laitthymsel.com is a work protected by intellectual property law.",
+      "p2": "All content on the website is the exclusive property of Lait Thym Sel unless otherwise stated.",
+      "p3": "Any reproduction or use without prior written authorization is strictly prohibited."
+    },
+
+    "section3": {
+      "title": "3 – Personal data",
+      "p1": "Lait Thym Sel may collect personal data through forms on the website.",
+      "p2": "In accordance with GDPR regulations, users have the right to access, rectify and delete their personal data.",
+      "contact": "Requests may be sent to:"
+    },
+
+    "section4": {
+      "title": "4 – Cookies",
+      "p1": "The website may use cookies to improve user experience and performance.",
+      "p2": "For more information:",
+      "link": "view the cookie policy"
+    },
+
+    "section5": {
+      "title": "5 – Liability",
+      "p1": "Lait Thym Sel cannot be held liable for any damage resulting from the use or inability to use the website."
+    },
+
+    "section6": {
+      "title": "6 – Legal details",
+      "owner": "<strong>Website owner:</strong><br/>Lait Thym Sel – SARL FG2M<br/>17 rue Boisnet – 49100 Angers, France<br/>Phone: +33 2 41 27 20 40<br/>Email: contact@laitthymsel.fr",
+      "company": "Share capital: €10,000<br/>RCS Angers: 830 927 380<br/>NAF code: 5610A",
+      "publisher": "<strong>Publishing manager:</strong><br/>Lait Thym Sel – SARL FG2M",
+      "creator": "<strong>Website design & development:</strong><br/><a href='https://maisondellalucia.fr' target='_blank'>Maison della Lucia</a><br/>Art direction & web development",
+      "hosting": "Hosting: to be completed according to the hosting provider.",
+      "credits": "Photo credits: Laura Evrat"
+    }
+  },
+   "rgpd": {
+    "title": "Data Protection (GDPR)",
+    "intro": "The Restaurant is committed to protecting your personal data in accordance with GDPR regulations.",
+
+    "section1": {
+      "title": "Core commitments",
+      "p1": "The Restaurant ensures the protection, confidentiality and security of personal data.",
+      "li1": { "title": "Transparency:", "text": "clear information on data usage." },
+      "li2": { "title": "Legitimacy:", "text": "data limited to what is necessary." },
+      "li3": { "title": "Confidentiality:", "text": "appropriate security measures." },
+      "li4": { "title": "Retention:", "text": "limited to defined purposes." },
+      "li5": { "title": "Rights:", "text": "access, modification and deletion." },
+      "p2": "This policy may be updated at any time."
+    },
+
+    "section2": {
+      "title": "Your consent",
+      "p1": "Personal data is collected only when legally required.",
+      "cookies": "More information about cookies:",
+      "link": "cookie policy"
+    },
+
+    "section3": {
+      "title": "Collected data and purposes",
+      "p1": "Only data necessary for our services is collected.",
+      "li1": "online services usage (e.g. Zenchef, SecretBox)",
+      "li2": "online or phone reservations",
+      "li3": "purchases and services",
+      "li4": "communications and updates",
+      "li5": "restaurant visits",
+      "p2": "Collected data includes name, email and phone number.",
+      "p3": "Payment providers may collect banking data.",
+      "p4": "No sensitive data is collected."
+    },
+
+    "section4": {
+      "title": "Security and confidentiality",
+      "p1": "Appropriate technical and organizational measures are implemented.",
+      "p2": "Access is restricted to authorized personnel."
+    },
+
+    "section5": {
+      "title": "Data retention",
+      "p1": "Data is stored only for the necessary duration.",
+      "p2": "It may be deleted upon request."
+    },
+
+    "section6": {
+      "title": "Your rights",
+      "p1": "You have rights of access, rectification, deletion and objection.",
+      "contact": "Lait Thym Sel Restaurant – 17 rue Boisnet – 49100 Angers, France",
+      "partner1": "Zenchef – 120-122 rue Réaumur – 75002 Paris",
+      "partner2": "SecretBox –",
+      "cnil": "You may lodge a complaint with the CNIL."
+    },
+
+    "footer": "Website designed and developed by"
+  },
+  "chefs": {
+    "hero": {
+      "kicker": "The house",
+      "title": "A story of two",
+      "alt": "The chefs of Lait Thym Sel restaurant"
+    },
+
+    "intro": "Lait Thym Sel was born from a shared vision.<br />That of a sincere, demanding cuisine, guided by gesture and time.",
+
+    "story": [
+      "After six years spent in the historic district of La Doutre in Angers, we chose in December 2023 to cross the Maine River and open a new place, a place that reflects us more deeply.",
+      "In September 2025, a year and a half after settling in, a major water damage incident abruptly brought everything to a halt. This sudden interruption forced us to refocus, rethink our organization, and strengthen the identity of our house.",
+      "Our new home, an elegant brick building, was transformed with heightened attention. Every detail, every space, every atmosphere now fully reflects our personality and vision.",
+      "Today, we return with a more personal, more intimate, more exclusive place. A setting designed by us, for you, where every flavor tells our story."
+    ],
+
+    "signature": "<strong>Milk</strong> for indulgence and comfort.<br /><strong>Thyme</strong> for creativity and character.<br /><strong>Salt</strong> for rawness, minerality, and balance.",
+
+    "duo": {
+      "title": "A story of two",
+      "intro": [
+        "Before being a restaurant, Lait Thym Sel is a story of partnership.",
+        "Two paths, two sensibilities, one shared level of excellence.",
+        "From the very beginning, we have built this house together, four hands working as one."
+      ]
+    },
+
+    "fanny": {
+      "name": "Fanny Morvan",
+      "bio": [
+        "Born in Annecy, Fanny discovered her calling for cuisine at a very young age. At 15, she left her region to train between Bonneville, Grenoble, and Nice.",
+        "Early on, she felt the need to open herself to the world. She spent three years in England working in dining rooms, developing confidence and a strong sense of hospitality.",
+        "She then continued her journey between Saint-Barthélemy and Courchevel, serving an exacting international clientele. These experiences shaped a precise, ambitious personality driven by attention to detail."
+      ]
+    },
+
+    "gaetan": {
+      "name": "Gaëtan Morvan",
+      "bio": [
+        "Born in Angers, Gaëtan entered the kitchen at 15 through an apprenticeship at L’Hoirie. After earning a culinary degree and a dessert specialization, he naturally pursued excellence.",
+        "Michel Guérard offered him his first major opportunity. He later joined Alain Ducasse at Le Louis XV in Monaco, where he discovered total discipline and uncompromising standards.",
+        "His journey continued with Laurent Saudeau and then at SaQuaNa in Honfleur, influenced by a refined Japanese-inspired cuisine focused on purity and essentials."
+      ]
+    },
+
+    "closing": [
+      "When Fanny and Gaëtan met, the connection was immediate. Very quickly, they left everything behind to travel to Shanghai and take part in the opening of a Michelin-starred chef’s restaurant.",
+      "In 2017, Lait Thym Sel was born. From the very beginning, every dish and every menu has been conceived together.",
+      "Today, they fully reunite as a duo in the kitchen, side by side, more united than ever. A natural continuation for a house built with four hands, precision, and a shared identity."
+    ]
+  }
+
+}

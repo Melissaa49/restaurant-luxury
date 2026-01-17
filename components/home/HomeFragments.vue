@@ -5,32 +5,44 @@
 
       <!-- HAUT GAUCHE -->
       <figure class="item item-plat">
-        <img src="/images/plat-2.png" alt="Plat signature" />
+        <img
+          src="/images/plat-2.png"
+          :alt="t('fragments.alt.dish')"
+        />
       </figure>
 
       <!-- MILIEU DROITE -->
       <figure class="item item-table">
-        <img src="/images/table-2.png" alt="Salle du restaurant" />
+        <img
+          src="/images/table-2.png"
+          :alt="t('fragments.alt.room')"
+        />
       </figure>
 
       <!-- BAS GAUCHE -->
       <figure class="item item-chef">
-        <img src="/images/chef-2.png" alt="Le chef en cuisine" />
+        <img
+          src="/images/chef-2.png"
+          :alt="t('fragments.alt.chef')"
+        />
       </figure>
 
     </div>
 
     <!-- TEXTE -->
     <div class="fragments-text">
-      <p>
-        Fragments d’un lieu<br />
-        et d’une cuisine.
-      </p>
+      <p v-html="t('fragments.text')" />
       <span class="divider"></span>
     </div>
 
   </section>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>
 
 <style scoped>
 /* =========================================================

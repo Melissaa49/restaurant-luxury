@@ -2,22 +2,28 @@
   <section class="hero-reservation">
     <div class="hero-inner">
       <h1 class="hero-title">
-        La table est ouverte.
+        {{ t('heroReservation.title') }}
       </h1>
 
       <NuxtLink to="/reservation" class="hero-cta">
-        Réserver une table
+        {{ t('heroReservation.cta') }}
       </NuxtLink>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>
 
 <style scoped>
 /* =========================================================
    HERO — FOND IMAGE
 ========================================================= */
 .hero-reservation {
-   min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 160px);
   background-image: url('/images/fond-mineral.png');
   background-size: cover;
   background-position: center;

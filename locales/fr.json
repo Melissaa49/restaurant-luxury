@@ -1,0 +1,296 @@
+{
+  "hero": {
+    "headline": "Une table, un instant, une cuisine.",
+    "subtitle": "Cuisine gastronomique à Angers",
+    "cta": "RÉSERVER UNE TABLE"
+  },
+
+  "nav": {
+    "menu": "MENUS",
+    "galerie": "GALERIE",
+    "reserver": "RÉSERVER"
+  },
+
+  "language": {
+    "fr": "FR",
+    "en": "EN"
+  },
+  "heroReservation": {
+    "title": "La table est ouverte.",
+    "cta": "Réserver une table"
+  },
+  "fragments": {
+    "text": "Fragments d’un lieu<br />et d’une cuisine.",
+    "alt": {
+      "dish": "Plat signature",
+      "room": "Salle du restaurant",
+      "chef": "Le chef en cuisine"
+    }
+  },
+
+   "footer": {
+    "name": "Lait Thym Sel",
+    "address": "17, rue Boisnet<br />49100 Angers",
+    "phone": "07 89 65 59 07",
+
+    "legal": {
+      "mentions": "Mentions légales",
+      "terms": "Conditions générales",
+      "privacy": "Protection des données"
+    },
+
+    "copyright": "Lait Thym Sel",
+    "credit": {
+      "text": "Site conçu par",
+      "agency": "Maison della Lucia"
+    }
+  },
+  "reservation": {
+    "title": "Réserver une table.",
+    "intro": "Nous vous accueillons<br />sur réservation uniquement.",
+
+    "fields": {
+      "date": "Date",
+      "guests": "Convives",
+      "service": "Service",
+      "time": "Horaire"
+    },
+
+    "guests": "convive | convives",
+
+    "service": {
+      "lunch": "Déjeuner",
+      "dinner": "Dîner"
+    },
+
+    "cta": {
+      "confirm": "Confirmer la réservation",
+      "back": "Retour à l’accueil"
+    },
+
+    "note": "Réservation en ligne — confirmation immédiate",
+
+    "confirmation": {
+      "kicker": "Confirmation",
+      "title": "Votre table est réservée.",
+      "intro": "Nous avons le plaisir de vous<br />confirmer votre réservation.",
+      "note": "Un e-mail de confirmation vous sera adressé avec les détails de votre réservation."
+    }
+  },
+   "cgu": {
+    "title": "Conditions Générales",
+    "intro": "Les présentes Conditions Générales régissent les relations entre le restaurant Lait Thym Sel et ses clients.",
+
+    "preamble": {
+      "title": "Préambule",
+      "p1": "Les présentes Conditions Générales régissent les relations entre la SARL FG2M Restaurant Lait Thym Sel, SARL au capital de 10 000 euros, immatriculée sous le numéro 830 927 380 RCS Angers, exploitant le restaurant Lait Thym Sel (ci-après la « Société »), et toute personne physique ou morale souhaitant effectuer une demande de réservation (ci-après le « Client »).",
+      "p2": "Le Client reconnaît expressément avoir pris connaissance et accepter les présentes Conditions Générales lors du processus de réservation en ligne."
+    },
+
+    "article1": {
+      "title": "Article 1 – Objet",
+      "content": "Les présentes Conditions Générales ont pour objet de déterminer les conditions dans lesquelles le Client peut effectuer, par le biais du système de réservation accessible sur le site laitthymsel.com, une demande de réservation afin de bénéficier des services de restauration proposés par le restaurant Lait Thym Sel situé au 17 rue Boisnet – 49100 Angers."
+    },
+
+    "article2": {
+      "title": "Article 2 – Modalités de réservation",
+      "p1": "La réservation en ligne s’effectue via le formulaire accessible à l’adresse https://www.laitthymsel.com/reserver, propulsé par la plateforme Zenchef.",
+      "p2": "Le Client s’engage à renseigner l’ensemble des champs demandés, notamment la date, le service, l’horaire et le nombre de couverts.",
+      "p3": "L’empreinte bancaire demandée lors de la réservation constitue une garantie et ne correspond ni à un acompte, ni à un débit immédiat."
+    },
+
+    "article3": {
+      "title": "Article 3 – Annulation",
+      "p1": "Le Client dispose d’un délai de 12 heures avant l’horaire prévu pour modifier ou annuler sa réservation.",
+      "p2": "Toute demande d’annulation peut être effectuée :",
+      "email": "par e-mail à l’adresse : contact@laitthymsel.fr",
+      "phone": "par téléphone au 02 41 27 20 40"
+    },
+
+    "article4": {
+      "title": "Article 4 – Pénalités",
+      "content": "En cas de non-présentation du Client sans annulation préalable, une pénalité de 500 € par couvert réservé pourra être appliquée."
+    },
+
+    "article5": {
+      "title": "Article 5 – Paiement sécurisé",
+      "content": "Le système de réservation utilise la solution de paiement sécurisé Payzen. Les données bancaires sont cryptées et ne sont jamais conservées par la Société."
+    },
+
+    "article6": {
+      "title": "Article 6 – Responsabilité",
+      "p1": "La Société s’engage à fournir les prestations de restauration dans les conditions confirmées lors de la réservation.",
+      "p2": "Les informations figurant sur le site sont fournies à titre indicatif et non contractuel."
+    },
+
+    "article7": {
+      "title": "Article 7 – Données personnelles",
+      "content": "Les données collectées lors de la réservation sont destinées exclusivement à la gestion des réservations."
+    },
+
+    "article8": {
+      "title": "Article 8 – Droit applicable",
+      "content": "Les présentes Conditions Générales sont soumises au droit français. Tout litige sera porté devant les juridictions compétentes d’Angers."
+    }
+  },
+
+  "common": {
+    "credit": "Site conçu et réalisé par"
+  },
+  "legal": {
+    "kicker": "Informations légales",
+    "title": "Mentions légales",
+
+    "section1": {
+      "title": "1 – Informations",
+      "p1": "Les informations publiées sur le site internet laitthymsel.com sont non contractuelles.",
+      "p2": "Le Restaurant Lait Thym Sel met tout en œuvre pour s’assurer que les informations diffusées sont exactes et à jour.",
+      "p3": "Le Restaurant Lait Thym Sel décline toute responsabilité pour tout dommage résultant de l’accès ou de l’utilisation du site."
+    },
+
+    "section2": {
+      "title": "2 – Propriété intellectuelle",
+      "p1": "Le site internet laitthymsel.com constitue une œuvre de l’esprit protégée par le Code de la propriété intellectuelle.",
+      "p2": "L’ensemble du site et de ses contenus est la propriété exclusive de la société Lait Thym Sel.",
+      "p3": "Toute reproduction ou représentation sans autorisation préalable est strictement interdite."
+    },
+
+    "section3": {
+      "title": "3 – Données personnelles",
+      "p1": "Le Restaurant Lait Thym Sel peut collecter des données personnelles via les formulaires du site.",
+      "p2": "Conformément au RGPD, l’utilisateur dispose d’un droit d’accès, de rectification et de suppression.",
+      "contact": "Toute demande peut être adressée à :"
+    },
+
+    "section4": {
+      "title": "4 – Cookies",
+      "p1": "Le site peut utiliser des cookies afin d’améliorer l’expérience utilisateur.",
+      "p2": "Pour plus d’informations :",
+      "link": "consulter la politique des cookies"
+    },
+
+    "section5": {
+      "title": "5 – Responsabilité",
+      "p1": "Le Restaurant Lait Thym Sel ne saurait être tenu responsable de tout dommage résultant de l’utilisation du site."
+    },
+
+    "section6": {
+      "title": "6 – Informations légales",
+      "owner": "<strong>Propriétaire du site :</strong><br/>Lait Thym Sel – SARL FG2M<br/>17, rue Boisnet – 49100 Angers<br/>Téléphone : 02 41 27 20 40<br/>E-mail : contact@laitthymsel.fr",
+      "company": "Capital social : 10 000 €<br/>RCS Angers : 830 927 380<br/>Code APE : 5610A",
+      "publisher": "<strong>Responsable de publication :</strong><br/>Lait Thym Sel – SARL FG2M",
+      "creator": "<strong>Création & développement du site :</strong><br/><a href='https://maisondellalucia.fr' target='_blank'>Maison della Lucia</a><br/>Direction artistique & développement web",
+      "hosting": "Hébergement : à compléter selon l’hébergeur du site.",
+      "credits": "Crédits photographiques : Laura Evrat"
+    }
+  },
+   "rgpd": {
+    "title": "Protection des données (RGPD)",
+    "intro": "Le Restaurant s’engage à protéger vos données personnelles conformément au RGPD et à la loi Informatique et Libertés.",
+
+    "section1": {
+      "title": "Engagements fondamentaux",
+      "p1": "Le Restaurant s’engage à assurer la protection, la confidentialité et la sécurité des données personnelles qui lui sont confiées.",
+      "li1": { "title": "Transparence :", "text": "information claire sur l’utilisation des données." },
+      "li2": { "title": "Légitimité :", "text": "collecte limitée aux données nécessaires." },
+      "li3": { "title": "Confidentialité :", "text": "mesures de sécurité adaptées." },
+      "li4": { "title": "Conservation :", "text": "durée limitée aux finalités." },
+      "li5": { "title": "Droits :", "text": "accès, modification et suppression." },
+      "p2": "La présente politique peut être modifiée à tout moment."
+    },
+
+    "section2": {
+      "title": "Votre consentement",
+      "p1": "Vos données sont collectées uniquement lorsque cela est légal et pertinent.",
+      "cookies": "Plus d’informations concernant les cookies :",
+      "link": "politique des cookies"
+    },
+
+    "section3": {
+      "title": "Données collectées et finalités",
+      "p1": "Nous collectons uniquement les données nécessaires à nos services.",
+      "li1": "navigation sur nos services en ligne (ex : Zenchef, SecretBox)",
+      "li2": "réservations en ligne ou par téléphone",
+      "li3": "achats et services",
+      "li4": "communications et actualités",
+      "li5": "venue au restaurant",
+      "p2": "Les données collectées incluent notamment nom, prénom, email et téléphone.",
+      "p3": "Payzen peut collecter des données bancaires dans le cadre des paiements.",
+      "p4": "Aucune donnée sensible n’est collectée."
+    },
+
+    "section4": {
+      "title": "Sécurité et confidentialité",
+      "p1": "Des mesures techniques et organisationnelles sont mises en œuvre.",
+      "p2": "L’accès est limité aux personnes autorisées."
+    },
+
+    "section5": {
+      "title": "Durée de conservation",
+      "p1": "Les données sont conservées pendant la durée nécessaire.",
+      "p2": "Elles peuvent être supprimées sur simple demande."
+    },
+
+    "section6": {
+      "title": "Exercice de vos droits",
+      "p1": "Vous disposez de droits d’accès, de rectification, de suppression et d’opposition.",
+      "contact": "Restaurant Lait Thym Sel – 17 rue Boisnet – 49100 Angers",
+      "partner1": "Zenchef – 120-122 rue Réaumur – 75002 Paris",
+      "partner2": "SecretBox –",
+      "cnil": "Vous pouvez saisir la CNIL en cas de litige."
+    },
+
+    "footer": "Site conçu et réalisé par"
+  },
+  "chefs": {
+    "hero": {
+      "kicker": "La maison",
+      "title": "Une histoire de duo",
+      "alt": "Les chefs du restaurant Lait Thym Sel"
+    },
+
+    "intro": "Lait Thym Sel est né d’une vision commune.<br />Celle d’une cuisine sincère, exigeante, portée par le geste et le temps.",
+
+    "story": [
+      "Après six années passées dans le quartier historique de la Doutre à Angers, nous avons choisi, en décembre 2023, de franchir la Maine pour ouvrir un nouveau lieu, un lieu qui nous ressemble davantage.",
+      "En septembre 2025, un an et demi après notre installation, un dégât des eaux est venu tout arrêter. Ce coup d’arrêt brutal nous a obligés à nous recentrer, à repenser notre organisation et à renforcer l’identité de notre maison.",
+      "Notre nouvelle maison, une élégante bâtisse en brique, a été transformée avec une attention redoublée. Chaque détail, chaque espace, chaque atmosphère reflète désormais pleinement notre personnalité et notre vision.",
+      "Aujourd’hui, nous revenons avec un lieu plus personnel, plus intime, plus exclusif. Un écrin pensé par nous, pour vous, où chaque saveur raconte notre histoire."
+    ],
+
+    "signature": "<strong>Lait</strong> pour la gourmandise et la douceur.<br /><strong>Thym</strong> pour la créativité et le caractère.<br /><strong>Sel</strong> pour le brut, le minéral, l’équilibre.",
+
+    "duo": {
+      "title": "Une histoire de duo",
+      "intro": [
+        "Avant d’être un restaurant, Lait Thym Sel est une histoire de duo.",
+        "Deux parcours, deux sensibilités, un même niveau d’exigence.",
+        "Depuis nos débuts, nous construisons cette maison à quatre mains."
+      ]
+    },
+
+    "fanny": {
+      "name": "Fanny Morvan",
+      "bio": [
+        "Née à Annecy, Fanny trouve très tôt dans la cuisine une vocation. À 15 ans, elle quitte sa région pour se former entre Bonneville, Grenoble et Nice.",
+        "Très jeune, elle ressent le besoin de s’ouvrir au monde. Elle part trois ans en Angleterre, travaille en salle et développe assurance et sens de l’hospitalité.",
+        "Elle poursuit ensuite son parcours entre Saint-Barthélemy et Courchevel, auprès d’une clientèle internationale exigeante. Ces expériences forgent une personnalité précise, ambitieuse et portée par le sens du détail."
+      ]
+    },
+
+    "gaetan": {
+      "name": "Gaëtan Morvan",
+      "bio": [
+        "Né à Angers, Gaëtan entre en cuisine à 15 ans en apprentissage à L’Hoirie. Après un BEP cuisine et une mention Dessert de Restaurant, il vise naturellement l’excellence.",
+        "Michel Guérard lui offre sa première grande opportunité. Il rejoint ensuite Alain Ducasse au Louis XV à Monaco, où il découvre une exigence totale.",
+        "Son parcours se poursuit auprès de Laurent Saudeau puis au SaQuaNa à Honfleur, influencé par une cuisine japonaise épurée et centrée sur l’essentiel."
+      ]
+    },
+
+    "closing": [
+      "Lorsque Fanny et Gaëtan se rencontrent, la connexion est immédiate. Très vite, ils partent ensemble à Shanghai pour participer à l’ouverture du restaurant d’un chef étoilé.",
+      "En 2017, Lait Thym Sel voit le jour. Dès l’ouverture, chaque plat, chaque menu est pensé à deux.",
+      "Aujourd’hui, ils reprennent leur duo en cuisine, ensemble, pleinement, plus soudés que jamais. Une continuité naturelle pour une maison construite à quatre mains."
+    ]
+  }
+}
