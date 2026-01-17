@@ -158,7 +158,7 @@
     "title": "Article 3 – Annulation",
     "p1": "Toute annulation doit être effectuée au minimum 12 heures avant l’horaire prévu.",
     "p2": "À défaut, des frais pourront être appliqués.",
-    "email": "Par e-mail : contact@laitthymsel.fr",
+    "email": "Par e-mail : contact\\@laitthymsel.fr",
     "phone": "Par téléphone : 02 41 27 20 40"
   },
 
@@ -214,7 +214,7 @@
         "name": "Lait Thym Sel – SARL FG2M",
         "address": "17, rue Boisnet – 49100 Angers",
         "phone": "02 41 27 20 40",
-        "email": "contact@laitthymsel.fr"
+        "email": "Par e-mail : contact\\@laitthymsel.fr"
       },
       "company": {
         "capital": "10 000 €",
