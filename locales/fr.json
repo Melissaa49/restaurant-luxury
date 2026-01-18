@@ -78,38 +78,40 @@
     "note": "Les menus ne sont pas proposés sans lactose, sans gluten ou sans œuf.<br />Merci de nous signaler toute allergie ou régime alimentaire lors de la réservation."
   },
 
-  "reservation": {
-    "title": "Réserver une table.",
-    "intro": "Nous vous accueillons<br />sur réservation uniquement.",
+ "reservation": {
+  "title": "Réserver une table.",
+  "intro": "Nous vous accueillons<br />sur réservation uniquement.",
 
-    "fields": {
-      "date": "Date",
-      "guests": "Convives",
-      "service": "Service",
-      "time": "Horaire"
-    },
-
+  "fields": {
+    "date": "Date",
     "guests": "Convives",
-
-    "service": {
-      "lunch": "Déjeuner",
-      "dinner": "Dîner"
-    },
-
-    "cta": {
-      "confirm": "Confirmer la réservation",
-      "back": "Retour à l’accueil"
-    },
-
-    "note": "Réservation en ligne — confirmation immédiate",
-
-    "confirmation": {
-      "kicker": "Confirmation",
-      "title": "Votre table est réservée.",
-      "intro": "Nous avons le plaisir de<br />confirmer votre réservation.",
-      "note": "Un e-mail de confirmation vous sera adressé avec tous les détails de votre réservation."
-    }
+    "service": "Service",
+    "time": "Horaire"
   },
+
+  "guests": "Convives",
+
+  "service": {
+    "lunch": "Déjeuner",
+    "dinner": "Dîner"
+  },
+
+  "cta": {
+    "confirm": "Confirmer la réservation",
+    "back": "Retour à l’accueil"
+  },
+
+  "hint": "Veuillez compléter la date et l’horaire",
+
+  "note": "Réservation en ligne — confirmation immédiate",
+
+  "confirmation": {
+    "kicker": "Confirmation",
+    "title": "Votre table est réservée.",
+    "intro": "Nous avons le plaisir de<br />confirmer votre réservation.",
+    "note": "Un e-mail de confirmation vous sera adressé avec tous les détails de votre réservation."
+  }
+},
 
   "footer": {
     "name": "Lait Thym Sel",

@@ -78,38 +78,40 @@
     "note": "Menus are not available lactose-free, gluten-free or egg-free.<br />Please inform us of any allergy or dietary requirement when booking."
   },
 
-  "reservation": {
-    "title": "Reserve a table.",
-    "intro": "We welcome you<br />by reservation only.",
+ "reservation": {
+  "title": "Reserve a table.",
+  "intro": "We welcome you<br />by reservation only.",
 
-    "fields": {
-      "date": "Date",
-      "guests": "Guests",
-      "service": "Service",
-      "time": "Time"
-    },
-
-    "guests": "guests",
-
-    "service": {
-      "lunch": "Lunch",
-      "dinner": "Dinner"
-    },
-
-    "cta": {
-      "confirm": "Confirm reservation",
-      "back": "Back to home"
-    },
-
-    "note": "Online booking — instant confirmation",
-
-    "confirmation": {
-      "kicker": "Confirmation",
-      "title": "Your table is reserved.",
-      "intro": "We are pleased to<br />confirm your reservation.",
-      "note": "A confirmation email will be sent with all the details of your reservation."
-    }
+  "fields": {
+    "date": "Date",
+    "guests": "Guests",
+    "service": "Service",
+    "time": "Time"
   },
+
+  "guests": "guests",
+
+  "service": {
+    "lunch": "Lunch",
+    "dinner": "Dinner"
+  },
+
+  "cta": {
+    "confirm": "Confirm reservation",
+    "back": "Back to home"
+  },
+
+  "hint": "Please select a date and a time",
+
+  "note": "Online booking — instant confirmation",
+
+  "confirmation": {
+    "kicker": "Confirmation",
+    "title": "Your table is reserved.",
+    "intro": "We are pleased to<br />confirm your reservation.",
+    "note": "A confirmation email will be sent with all the details of your reservation."
+  }
+},
 
   "footer": {
     "name": "Lait Thym Sel",
