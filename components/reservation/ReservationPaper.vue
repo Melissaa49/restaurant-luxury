@@ -68,11 +68,7 @@
 
           <!-- CTA -->
           <button class="cta" :disabled="!canConfirm" @click="confirm">
-            {{
-              canConfirm
-                ? t('reservation.cta.confirm')
-                : t('reservation.cta.incomplete')
-            }}
+            {{ t('reservation.cta.confirm') }}
           </button>
 
           <small v-if="!canConfirm" class="hint">
@@ -238,14 +234,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* =========================================================
-   FORM + PROGRESSION
+   FORM
 ========================================================= */
 .form {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 20px;
   color: #2a2623;
-  counter-reset: step;
 }
 
 .field label {
@@ -256,13 +251,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: .65;
 }
 
-.field label::before {
-  counter-increment: step;
-  content: counter(step) " · ";
-  opacity: .4;
-}
-
-/* INPUTS */
 input,
 select {
   width: 100%;
@@ -311,7 +299,6 @@ select {
 }
 
 .times button {
-  position: relative;
   padding: 12px 0;
   border: 1px solid rgba(160,130,90,.6);
   background: transparent;
@@ -329,21 +316,11 @@ select {
   border-color: var(--gold);
 }
 
-.times button.active::after {
-  content: "✓";
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 12px;
-  color: var(--gold);
-}
-
 /* =========================================================
    CTA
 ========================================================= */
 .cta {
-  margin-top: 20px;
+  margin-top: 18px;
   padding: 14px;
   border: 1px solid var(--gold);
   background: transparent;
