@@ -2,7 +2,9 @@
   <section class="reservation-section">
     <div class="paper">
 
-      <!-- FORMULAIRE -->
+      <!-- =========================
+           FORMULAIRE
+      ========================== -->
       <template v-if="!confirmed">
         <header class="paper-header">
           <h1>{{ t('reservation.title') }}</h1>
@@ -69,11 +71,16 @@
             {{ t('reservation.cta.confirm') }}
           </button>
 
-          <small>{{ t('reservation.note') }}</small>
+          <small v-if="!canConfirm" class="hint">
+            {{ t('reservation.hint') }}
+          </small>
+
         </div>
       </template>
 
-      <!-- CONFIRMATION -->
+      <!-- =========================
+           CONFIRMATION
+      ========================== -->
       <template v-else>
         <header class="paper-header confirm">
           <span class="confirm-kicker">
@@ -152,10 +159,6 @@ function confirm() {
 }
 </script>
 
-
-
-
-
 <style scoped>
 /* =========================================================
    PAGE
@@ -165,6 +168,24 @@ function confirm() {
   display: flex;
   justify-content: center;
   background: #0b0b0b;
+}
+
+/* =========================================================
+   RESET SYSTEME (ANTI BLEU)
+========================================================= */
+input,
+select,
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  box-shadow: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(.6);
+  opacity: .6;
+  cursor: pointer;
 }
 
 /* =========================================================
@@ -236,12 +257,14 @@ select {
   padding: 14px;
   border-radius: 4px;
   border: 1px solid rgba(0,0,0,.2);
-  background: rgba(255,255,255,.8);
+  background: rgba(255,255,255,.85);
   font-size: 15px;
   color: #2a2623;
 }
 
-/* SERVICE */
+/* =========================================================
+   SERVICE
+========================================================= */
 .service-toggle {
   display: flex;
   gap: 10px;
@@ -254,14 +277,21 @@ select {
   background: transparent;
   font-family: var(--font-title);
   cursor: pointer;
+  transition: all .25s ease;
+}
+
+.service-toggle button:hover {
+  background: rgba(160,130,90,.08);
 }
 
 .service-toggle button.active {
-  background: rgba(160,130,90,.18);
+  background: rgba(160,130,90,.22);
   border-color: var(--gold);
 }
 
-/* HORAIRES */
+/* =========================================================
+   HORAIRES
+========================================================= */
 .times {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -274,14 +304,21 @@ select {
   background: transparent;
   font-family: var(--font-title);
   cursor: pointer;
+  transition: all .25s ease;
+}
+
+.times button:hover {
+  background: rgba(160,130,90,.08);
 }
 
 .times button.active {
-  background: rgba(160,130,90,.18);
+  background: rgba(160,130,90,.22);
   border-color: var(--gold);
 }
 
-/* CTA */
+/* =========================================================
+   CTA
+========================================================= */
 .cta {
   margin-top: 18px;
   padding: 14px;
@@ -290,10 +327,14 @@ select {
   font-family: var(--font-title);
   letter-spacing: .1em;
   cursor: pointer;
+  color: #2a2623;
+  transition: all .3s ease;
 }
 
 .cta:disabled {
-  opacity: .4;
+  color: rgba(42,38,35,.35);
+  border-color: rgba(160,130,90,.25);
+  background: rgba(255,255,255,.4);
   cursor: not-allowed;
 }
 
@@ -301,7 +342,18 @@ select {
   margin-top: 26px;
 }
 
-/* CONFIRMATION */
+/* =========================================================
+   HINT UX
+========================================================= */
+.hint {
+  text-align: center;
+  font-size: 12px;
+  opacity: .6;
+}
+
+/* =========================================================
+   CONFIRMATION
+========================================================= */
 .confirmation {
   text-align: center;
   color: #2a2623;
@@ -319,7 +371,19 @@ select {
   margin-bottom: 28px;
 }
 
-/* DESKTOP */
+/* =========================================================
+   FOCUS ACCESSIBLE
+========================================================= */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   DESKTOP
+========================================================= */
 @media (min-width: 1024px) {
   .paper {
     max-width: 520px;
