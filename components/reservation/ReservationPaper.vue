@@ -171,7 +171,7 @@ function confirm() {
 }
 
 /* =========================================================
-   RESET SYSTEME (ANTI BLEU)
+   RESET SYSTEME (ANTI BLEU iOS)
 ========================================================= */
 input,
 select,
@@ -180,8 +180,22 @@ button {
   -webkit-appearance: none;
   outline: none;
   box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
+/* FORCE TEXTE BOUTONS iOS */
+button {
+  color: #2a2623;
+}
+
+/* ANTI BLEU ACTIVE / FOCUS iOS */
+button:active,
+button:focus {
+  color: #2a2623;
+  background: transparent;
+}
+
+/* DATE PICKER */
 input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(.6);
   opacity: .6;
@@ -251,6 +265,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: .65;
 }
 
+/* INPUTS */
 input,
 select {
   width: 100%;
