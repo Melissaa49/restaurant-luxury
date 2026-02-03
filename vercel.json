@@ -5,11 +5,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "frame-ancestors https://site-melissa.vercel.app https://*.app.github.dev"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "ALLOWALL"
+          "value": "frame-ancestors https://site-melissa-brown.vercel.app https://automatic-space-spoon-4j775gq6rpjvh755r-3000.app.github.dev"
         }
       ]
     }
