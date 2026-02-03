@@ -6,11 +6,17 @@ if (typeof window === 'undefined') return
 
     const { locale, data } = event.data
 
-    // stocker les données de démo sur window
-    ;(window as any).__DEMO_CONTENT__ ||= {}
-    ;(window as any).__DEMO_CONTENT__[locale] = data
+    // on stocke le contenu reçu
+    window.__DEMO_CONTENT__ = window.__DEMO_CONTENT__ || {}
+    window.__DEMO_CONTENT__[locale] = data
 
-    // notifier l’app
-    window.dispatchEvent(new CustomEvent('demo:update'))
+    // on notifie l'app
+    window.dispatchEvent(new Event('demo:update'))
   })
 })
+
+declare global {
+  interface Window {
+    __DEMO_CONTENT__?: Record<string, any>
+  }
+}
