@@ -4,24 +4,69 @@
 
     <div class="content">
       <p class="headline">
-        {{ t('hero.headline') }}
+        {{ heroHeadline }}
       </p>
 
       <p class="subtitle">
-        {{ t('hero.subtitle') }}
+        {{ heroSubtitle }}
       </p>
 
       <NuxtLink to="/reserver" class="cta">
-        {{ t('hero.cta') }}
+        {{ heroCta }}
       </NuxtLink>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRoute } from '#imports'
 
-const { t } = useI18n()
+declare global {
+  interface Window {
+    __DEMO_CONTENT__?: Record<string, any>
+  }
+}
+
+const route = useRoute()
+const isDemo = computed(() => route.query.demo === '1')
+
+const { t, locale } = useI18n()
+
+// contiendra le JSON reçu depuis l'éditeur
+const demoContent = ref<any>(null)
+
+function pullDemoContent() {
+  demoContent.value = window.__DEMO_CONTENT__?.[locale.value] || null
+}
+
+function onDemoUpdate() {
+  pullDemoContent()
+}
+
+onMounted(() => {
+  if (!isDemo.value) return
+  pullDemoContent()
+  window.addEventListener('demo:update', onDemoUpdate)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('demo:update', onDemoUpdate)
+})
+
+// helpers : si démo -> demoContent, sinon -> i18n
+const heroHeadline = computed(() => {
+  return (isDemo.value && demoContent.value?.hero?.headline) ? demoContent.value.hero.headline : t('hero.headline')
+})
+
+const heroSubtitle = computed(() => {
+  return (isDemo.value && demoContent.value?.hero?.subtitle) ? demoContent.value.hero.subtitle : t('hero.subtitle')
+})
+
+const heroCta = computed(() => {
+  return (isDemo.value && demoContent.value?.hero?.cta) ? demoContent.value.hero.cta : t('hero.cta')
+})
 </script>
 
 <style scoped>
